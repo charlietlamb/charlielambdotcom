@@ -35,12 +35,12 @@ export function Experience() {
               {item.description}
             </p>
 
-            <div className="flex flex-wrap gap-x-1 text-xs text-metadata-foreground">
+            <div className="flex flex-wrap text-xs text-metadata-foreground">
               {item.technologies.map((tech, index) => (
                 <span key={tech}>
                   {tech}
                   {index < item.technologies.length - 1 && (
-                    <span className="mx-1">/</span>
+                    <span className="mx-1.5 text-muted-foreground/50">/</span>
                   )}
                 </span>
               ))}
