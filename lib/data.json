@@ -1,0 +1,28 @@
+{
+  "experience": [
+    {
+      "id": "1",
+      "title": "Product Engineer",
+      "company": "LightWork",
+      "period": "Feb 2025 - Present",
+      "description": "Focus on developing complex AI agents using Vector Databases like Weaviate. Integrated LLM/Agent evaluation into CI/CD pipelines with DeepEval. Company specializes in AI & agents integration within property sector.",
+      "technologies": ["TypeScript", "Node.js", "Python", "AWS", "Weaviate", "DeepEval"]
+    },
+    {
+      "id": "2",
+      "title": "Graduate Software Engineer",
+      "company": "Spark Finance",
+      "period": "Sept 2024 - Feb 2025",
+      "description": "Built multiple .NET microservices, notably the PreQualification.Check service. Service orchestrates systems to evaluate client loan eligibility for new leads. Developed backend solutions using C# with direct business impact.",
+      "technologies": ["C#", ".NET", "PostgreSQL", "Docker"]
+    },
+    {
+      "id": "3",
+      "title": "Internship",
+      "company": "Cisco - Ensoft",
+      "period": "Aug 2023 - Sept 2023",
+      "description": "Created Python monitoring tool tracking team performance and leadership metrics. Tool met Cisco's internal standards and remains in active use. Enhanced systems programming and engineering capabilities.",
+      "technologies": ["Python"]
+    }
+  ]
+}
