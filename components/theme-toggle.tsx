@@ -13,7 +13,9 @@ interface ViewTransition {
 
 declare global {
   interface Document {
-    startViewTransition?(callback: () => void | Promise<void>): ViewTransition;
+    startViewTransition(
+      callback: () => void | Promise<void>,
+    ): ViewTransition | undefined;
   }
 }
 
@@ -28,6 +30,7 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <button
+        type="button"
         className="p-2 text-muted-foreground hover:text-foreground transition-colors"
         aria-label="Toggle theme"
       >
@@ -49,6 +52,7 @@ export function ThemeToggle() {
 
   return (
     <button
+      type="button"
       onClick={toggleTheme}
       className="p-2 text-muted-foreground hover:text-foreground transition-colors"
       aria-label="Toggle theme"

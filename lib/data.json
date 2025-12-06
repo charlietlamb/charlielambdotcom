@@ -32,5 +32,21 @@
       "description": "Created Python monitoring tool tracking team performance and leadership metrics. This tool met Cisco's internal standards and remains in active use.",
       "technologies": ["Python", "Shell", "Git"]
     }
+  ],
+  "education": [
+    {
+      "id": "1",
+      "degree": "Bachelor's Degree in Computer Science & Mathematics",
+      "institution": "University of Leeds",
+      "period": "2021 - 2024",
+      "description": "Graduated with a Bachelor's Degree in Computer Science & Mathematics from the University of Leeds."
+    },
+    {
+      "id": "2",
+      "degree": "A-Levels",
+      "institution": "Roundwood Park School",
+      "period": "2014 - 2021",
+      "description": "A-Levels in Computer Science, Mathematics, Further Mathematics, and Economics (all A* grades)."
+    }
   ]
 }

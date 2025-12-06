@@ -10,3 +10,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+@custom-variant dark (&:is(.dark *));
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.2s;
+}

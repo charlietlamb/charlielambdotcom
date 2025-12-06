@@ -1,4 +1,5 @@
 import experienceData from "@/lib/data.json";
+import { SectionHeader } from "./section-header";
 
 interface ExperienceItem {
   id: string;
@@ -13,11 +14,13 @@ export function Experience() {
   const { experience } = experienceData as { experience: ExperienceItem[] };
 
   return (
-      <section className="space-y-8">
+    <section className="space-y-4">
+      <SectionHeader>Experience</SectionHeader>
+      <div className="space-y-6">
         {experience.map((item) => (
           <article key={item.id}>
             <div className="flex items-start justify-between gap-4 mb-2">
-              <h3 className="font-semibold text-foreground">
+              <h3 className="text-foreground">
                 {item.title}{" "}
                 <span className="text-muted-foreground font-normal">
                   at {item.company}
@@ -44,6 +47,7 @@ export function Experience() {
             </div>
           </article>
         ))}
-      </section>
+      </div>
+    </section>
   );
 }

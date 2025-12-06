@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Socials } from "./socials";
 
 export function Header() {
   return (
@@ -21,6 +22,7 @@ export function Header() {
         </Link>
         .
       </p>
+      <Socials />
     </header>
   );
 }
