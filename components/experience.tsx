@@ -1,5 +1,4 @@
 import experienceData from "@/lib/data.json";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 interface ExperienceItem {
   id: string;
@@ -14,22 +13,7 @@ export function Experience() {
   const { experience } = experienceData as { experience: ExperienceItem[] };
 
   return (
-    <section className="w-full max-w-3xl mx-auto px-4 py-8">
-      <header className="mb-12">
-        <div className="flex items-center justify-between mb-2">
-          <h1 className="text-2xl font-bold text-foreground">
-            Hey, I'm Charlie
-          </h1>
-          <ThemeToggle />
-        </div>
-        <p className="text-muted-foreground mb-1">
-          Software Engineer with a passion for building things. Currently
-          working as a Product Engineer at{" "}
-          <span className="text-foreground">LightWork</span>.
-        </p>
-      </header>
-
-      <div className="space-y-8">
+      <section className="space-y-8">
         {experience.map((item) => (
           <article key={item.id}>
             <div className="flex items-start justify-between gap-4 mb-2">
@@ -39,7 +23,7 @@ export function Experience() {
                   at {item.company}
                 </span>
               </h3>
-              <time className="text-sm text-muted-foreground whitespace-nowrap flex-shrink-0">
+              <time className="text-sm text-muted-foreground whitespace-nowrap shrink-0">
                 {item.period}
               </time>
             </div>
@@ -60,7 +44,6 @@ export function Experience() {
             </div>
           </article>
         ))}
-      </div>
-    </section>
+      </section>
   );
 }

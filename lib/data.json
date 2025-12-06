@@ -2,27 +2,35 @@
   "experience": [
     {
       "id": "1",
-      "title": "Product Engineer",
-      "company": "LightWork",
-      "period": "Feb 2025 - Present",
-      "description": "Focus on developing complex AI agents using Vector Databases like Weaviate. Integrated LLM/Agent evaluation into CI/CD pipelines with DeepEval. Company specializes in AI & agents integration within property sector.",
-      "technologies": ["TypeScript", "Node.js", "Python", "AWS", "Weaviate", "DeepEval"]
+      "title": "Founding Engineer",
+      "company": "Autumn (YC S25)",
+      "period": "Dec 2025 - Present",
+      "description": "Joining Autumn as the first founding engineer. Autumn is a platform making credits, limits and usage based billing easy.",
+      "technologies": ["TypeScript", "Bun", "React", "AWS"]
     },
     {
       "id": "2",
-      "title": "Graduate Software Engineer",
-      "company": "Spark Finance",
-      "period": "Sept 2024 - Feb 2025",
-      "description": "Built multiple .NET microservices, notably the PreQualification.Check service. Service orchestrates systems to evaluate client loan eligibility for new leads. Developed backend solutions using C# with direct business impact.",
-      "technologies": ["C#", ".NET", "PostgreSQL", "Docker"]
+      "title": "Product Engineer",
+      "company": "LightWork AI",
+      "period": "Feb 2025 - Jan 2026",
+      "description": "At LightWork AI, I developed a full-stack web application supported by an array of microservices. These included multi-agent systems utilised by property managers to automate common conversational workflows, including maintenance tasks and compliance renewals. I led the backend team, facilitating team meetings and sprint planning.",
+      "technologies": ["Node.js", "Python", "React", "MongoDB", "LangGraph", "GitHub Actions", "Qdrant", "Kubernetes"]
     },
     {
       "id": "3",
-      "title": "Internship",
-      "company": "Cisco - Ensoft",
+      "title": "Graduate Software Engineer",
+      "company": "Spark Finance",
+      "period": "Sept 2024 - Feb 2025",
+      "description": "At Spark Finance, I developed multiple C# .NET microservices. These included services with event-driven architecture, including stream consumers and producers. Other services I developed orchestrated 30+ services to process data relating to specific companies and directors.",
+      "technologies": ["C# .NET", "AWS", "MySQL", "Docker", "Jenkins", "Blazor"]
+    },
+    {
+      "id": "4",
+      "title": "Software Engineer Intern",
+      "company": "Cisco (Ensoft)",
       "period": "Aug 2023 - Sept 2023",
-      "description": "Created Python monitoring tool tracking team performance and leadership metrics. Tool met Cisco's internal standards and remains in active use. Enhanced systems programming and engineering capabilities.",
-      "technologies": ["Python"]
+      "description": "Created Python monitoring tool tracking team performance and leadership metrics. This tool met Cisco's internal standards and remains in active use.",
+      "technologies": ["Python", "Shell", "Git"]
     }
   ]
 }
