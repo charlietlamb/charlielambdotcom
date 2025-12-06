@@ -26,7 +26,7 @@ export function Experience() {
                   at {item.company}
                 </span>
               </h3>
-              <time className="text-sm text-muted-foreground whitespace-nowrap shrink-0">
+              <time className="text-sm text-metadata-foreground whitespace-nowrap shrink-0">
                 {item.period}
               </time>
             </div>
@@ -35,7 +35,7 @@ export function Experience() {
               {item.description}
             </p>
 
-            <div className="flex flex-wrap gap-x-1 text-xs text-muted-foreground">
+            <div className="flex flex-wrap gap-x-1 text-xs text-metadata-foreground">
               {item.technologies.map((tech, index) => (
                 <span key={tech}>
                   {tech}

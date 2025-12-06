@@ -25,7 +25,7 @@ export function Education() {
                   {item.degree}
                 </span>
               </h3>
-              <time className="text-sm text-muted-foreground whitespace-nowrap shrink-0">
+              <time className="text-sm text-metadata-foreground whitespace-nowrap shrink-0">
                 {item.period}
               </time>
             </div>
