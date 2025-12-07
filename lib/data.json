@@ -6,7 +6,14 @@
       "company": "Autumn (YC S25)",
       "period": "Dec 2025 - Present",
       "description": "Joining Autumn as the first founding engineer. Autumn is a platform making credits, limits and usage based billing easy.",
-      "technologies": ["TypeScript", "Bun", "React", "AWS"]
+      "technologies": [
+        "Bun",
+        "React",
+        "AWS",
+        "PostgreSQL",
+        "Drizzle",
+        "GitHub Actions"
+      ]
     },
     {
       "id": "2",
@@ -14,7 +21,17 @@
       "company": "LightWork AI",
       "period": "Feb 2025 - Jan 2026",
       "description": "At LightWork AI, I developed a full-stack web application supported by an array of microservices. These included multi-agent systems utilised by property managers to automate common conversational workflows, including maintenance tasks and compliance renewals. I led the backend team, facilitating team meetings and sprint planning.",
-      "technologies": ["Node.js", "Python", "React", "MongoDB", "GCP", "LangGraph", "GitHub Actions", "Qdrant", "Kubernetes"]
+      "technologies": [
+        "Node.js",
+        "Python",
+        "React",
+        "MongoDB",
+        "GCP",
+        "LangGraph",
+        "GitHub Actions",
+        "Qdrant",
+        "Kubernetes"
+      ]
     },
     {
       "id": "3",

@@ -7,11 +7,14 @@ export function Header() {
     <header className="flex flex-col gap-2">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold text-foreground">Hey, I'm Charlie</h1>
-        <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <Socials />
+          <ThemeToggle />
+        </div>
       </div>
       <p className="text-muted-foreground">
-        Software Engineer with a passion for building things. Currently working
-        as a Founding Engineer at{" "}
+        Software Engineer with a passion for building. Currently working as a
+        Founding Engineer at{" "}
         <Link
           href="https://useautumn.com"
           target="_blank"
@@ -22,7 +25,6 @@ export function Header() {
         </Link>
         .
       </p>
-      <Socials />
     </header>
   );
 }

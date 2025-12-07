@@ -1,11 +1,12 @@
-import { Github, Linkedin, Mail } from "lucide-react";
-import { XIcon } from "@/components/x-icon";
+import { Github } from "lucide-react";
+import { XIcon } from "@/components/icons/x-icon";
+import { LinkedInIcon } from "./icons/linkedin-icon";
 
 export function Socials() {
   return (
     <div className="flex gap-4">
       <a
-        href="https://github.com/charlietlamb"
+        href="https://go.charlielamb.com/github"
         target="_blank"
         rel="noopener noreferrer"
         className="text-muted-foreground hover:text-foreground transition-colors"
@@ -14,7 +15,7 @@ export function Socials() {
         <Github className="h-5 w-5" />
       </a>
       <a
-        href="https://x.com/charlietlamb"
+        href="https://go.charlielamb.com/x"
         target="_blank"
         rel="noopener noreferrer"
         className="text-muted-foreground hover:text-foreground transition-colors"
@@ -23,20 +24,13 @@ export function Socials() {
         <XIcon />
       </a>
       <a
-        href="https://linkedin.com/in/charlielamb"
+        href="https://go.charlielamb.com/linkedin"
         target="_blank"
         rel="noopener noreferrer"
         className="text-muted-foreground hover:text-foreground transition-colors"
         aria-label="LinkedIn"
       >
-        <Linkedin className="h-5 w-5" />
-      </a>
-      <a
-        href="mailto:charlielamb20@icloud.com"
-        className="text-muted-foreground hover:text-foreground transition-colors"
-        aria-label="Email"
-      >
-        <Mail className="h-5 w-5" />
+        <LinkedInIcon className="h-5 w-5" />
       </a>
     </div>
   );
