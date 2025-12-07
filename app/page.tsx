@@ -1,3 +1,4 @@
+import { Achievements } from "@/components/achievements";
 import { Contact } from "@/components/contact";
 import { Education } from "@/components/education";
 import { Experience } from "@/components/experience";
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       <Experience />
       <Education />
+      <Achievements />
       <Contact />
     </div>
   );

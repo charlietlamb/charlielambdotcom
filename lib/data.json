@@ -65,5 +65,28 @@
       "period": "2014 - 2021",
       "description": "A-Levels in Computer Science, Mathematics, Further Mathematics, and Economics (all A* grades)."
     }
+  ],
+  "achievements": [
+    {
+      "id": "1",
+      "startText": "1st place at the ",
+      "linkText": "{Tech: Europe}, OpenAI & VEED",
+      "endText": " London Hackathon.",
+      "url": "https://techeurope.io/hackathons/london-hackathon-november-2025"
+    },
+    {
+      "id": "2",
+      "startText": "Multiple ",
+      "linkText": "open source contributions",
+      "endText": " including better-auth & convex.",
+      "url": "https://go.charlielamb.com/github"
+    },
+    {
+      "id": "3",
+      "startText": "",
+      "linkText": "500+ GitHub stars",
+      "endText": " across my open source projects.",
+      "url": "https://go.charlielamb.com/github"
+    }
   ]
 }
