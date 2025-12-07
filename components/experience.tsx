@@ -22,9 +22,7 @@ export function Experience() {
             <div className="flex items-start justify-between gap-4 mb-2">
               <h3 className="text-foreground">
                 {item.title}{" "}
-                <span className="text-muted-foreground font-normal">
-                  at {item.company}
-                </span>
+                <span className="text-muted-foreground">at {item.company}</span>
               </h3>
               <time className="text-sm text-metadata-foreground whitespace-nowrap shrink-0">
                 {item.period}

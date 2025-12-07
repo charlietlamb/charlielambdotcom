@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className="flex flex-col gap-2">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-foreground">Hey, I'm Charlie</h1>
+        <h1 className="text-2xl text-foreground">Hey, I'm Charlie</h1>
         <div className="flex items-center gap-2">
           <Socials />
           <ThemeToggle />

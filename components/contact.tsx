@@ -6,7 +6,7 @@ export function Contact() {
     <section className="space-y-4">
       <Separator />
       <footer className="text-muted-foreground inline-flex text-center w-full">
-        <p>
+        <p className="text-sm">
           If you want to get in touch, feel free to send me an{" "}
           <Link
             href="mailto:charlielamb20@icloud.com"
