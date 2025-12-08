@@ -23,7 +23,7 @@ export function Education() {
                 {item.institution}{" "}
                 <span className="text-muted-foreground">{item.degree}</span>
               </h3>
-              <time className="text-sm text-metadata-foreground whitespace-nowrap shrink-0">
+              <time className="text-sm text-metadata-foreground whitespace-nowrap shrink-0 mt-[2.5px]">
                 {item.period}
               </time>
             </div>
