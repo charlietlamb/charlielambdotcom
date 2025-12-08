@@ -19,7 +19,7 @@ export function Experience() {
       <div className="space-y-6">
         {experience.map((item) => (
           <article key={item.id}>
-            <div className="flex items-start justify-between gap-4 mb-2">
+            <div className="flex items-center justify-between gap-4 mb-2">
               <h3 className="text-foreground">
                 {item.title}{" "}
                 <span className="text-muted-foreground">at {item.company}</span>
@@ -33,12 +33,12 @@ export function Experience() {
               {item.description}
             </p>
 
-            <div className="flex flex-wrap text-xs text-metadata-foreground">
+            <div className="flex flex-wrap text-xs text-metadata-foreground gap-1.5">
               {item.technologies.map((tech, index) => (
                 <span key={tech}>
                   {tech}
                   {index < item.technologies.length - 1 && (
-                    <span className="mx-1.5 text-muted-foreground/50">/</span>
+                    <span className="text-muted-foreground/50 ml-1.5">/</span>
                   )}
                 </span>
               ))}
