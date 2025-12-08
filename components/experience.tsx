@@ -19,7 +19,7 @@ export function Experience() {
       <div className="space-y-6">
         {experience.map((item) => (
           <article key={item.id}>
-            <div className="flex items-center justify-between gap-4 mb-2">
+            <div className="flex items-start md:items-center justify-between gap-4 mb-2">
               <h3 className="text-foreground">
                 {item.title}{" "}
                 <span className="text-muted-foreground">at {item.company}</span>
