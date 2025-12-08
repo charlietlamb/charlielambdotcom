@@ -19,7 +19,7 @@ export function Header() {
           href="https://useautumn.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-foreground underline hover:text-foreground/80 transition-colors"
+          className="text-muted-foreground hover:text-foreground underline transition-colors"
         >
           Autumn
         </Link>
