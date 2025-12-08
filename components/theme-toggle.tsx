@@ -20,7 +20,7 @@ declare global {
 }
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -41,12 +41,12 @@ export function ThemeToggle() {
 
   const toggleTheme = () => {
     if (!document.startViewTransition) {
-      setTheme(theme === "dark" ? "light" : "dark");
+      setTheme(resolvedTheme === "dark" ? "light" : "dark");
       return;
     }
 
     document.startViewTransition(() => {
-      setTheme(theme === "dark" ? "light" : "dark");
+      setTheme(resolvedTheme === "dark" ? "light" : "dark");
     });
   };
 
@@ -57,7 +57,7 @@ export function ThemeToggle() {
       className="p-2 text-muted-foreground hover:text-foreground transition-colors"
       aria-label="Toggle theme"
     >
-      {theme === "dark" ? (
+      {resolvedTheme === "dark" ? (
         <Sun className="h-5 w-5" />
       ) : (
         <Moon className="h-5 w-5" />
