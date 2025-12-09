@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { metadata } from "@/app/metadata";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
@@ -13,10 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Charlie Lamb",
-  description: "Charlie Lamb's personal website",
-};
+export { metadata };
 
 export default function RootLayout({
   children,
