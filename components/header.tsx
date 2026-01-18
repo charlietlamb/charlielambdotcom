@@ -22,8 +22,17 @@ export function Header() {
           className="text-muted-foreground hover:text-foreground underline transition-colors"
         >
           Autumn
-        </Link>
-        .
+        </Link>{" "}
+        and building{" "}
+        <Link
+          href="https://ferix.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground hover:text-foreground underline transition-colors"
+        >
+          Ferix
+        </Link>{" "}
+        in my free time.
       </p>
     </header>
   );

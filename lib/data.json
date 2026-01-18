@@ -5,12 +5,13 @@
       "title": "Founding Engineer",
       "company": "Autumn (YC S25)",
       "period": "Dec 2025 - Present",
-      "description": "Joining Autumn as the first founding engineer. Autumn is a platform making credits, limits and usage based billing easy.",
+      "description": "Working at Autumn as the first founding engineer. Autumn is a platform making credits, limits and usage based billing easy.",
       "technologies": [
         "Bun",
         "React",
         "AWS",
         "PostgreSQL",
+        "ClickHouse",
         "Drizzle",
         "GitHub Actions"
       ]
@@ -69,20 +70,27 @@
   "achievements": [
     {
       "id": "1",
+      "startText": "Building ",
+      "linkText": "ferix.ai",
+      "endText": ", an open-source collectio of agent skills, subagents and rules.",
+      "url": "https://ferix.ai"
+    },
+    {
+      "id": "2",
       "startText": "1st place at the ",
       "linkText": "{Tech: Europe}, OpenAI & VEED",
       "endText": " London Hackathon.",
       "url": "https://techeurope.io/hackathons/london-hackathon-november-2025"
     },
     {
-      "id": "2",
+      "id": "3",
       "startText": "Multiple ",
       "linkText": "open source contributions",
       "endText": " including better-auth & convex.",
       "url": "https://go.charlielamb.com/github"
     },
     {
-      "id": "3",
+      "id": "4",
       "startText": "",
       "linkText": "500+ GitHub stars",
       "endText": " across my open source projects.",
