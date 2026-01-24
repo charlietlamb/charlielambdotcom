@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { metadata } from "@/app/metadata";
 import { ThemeProvider } from "@/components/theme-provider";
+import { JsonLd } from "@/components/json-ld";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,6 +26,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <JsonLd
+          baseUrl={
+            process.env.NEXT_PUBLIC_SITE_URL || "https://charlielamb.com"
+          }
+        />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
