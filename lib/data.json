@@ -14,7 +14,8 @@
         "ClickHouse",
         "Drizzle",
         "GitHub Actions"
-      ]
+      ],
+      "url": "https://useautumn.com/"
     },
     {
       "id": "2",
@@ -32,7 +33,9 @@
         "GitHub Actions",
         "Qdrant",
         "Kubernetes"
-      ]
+      ],
+      "url": "https://lightwork.co/",
+      "previewImage": "/images/lightwork.png"
     },
     {
       "id": "3",
@@ -40,7 +43,15 @@
       "company": "Spark Finance",
       "period": "Sept 2024 - Feb 2025",
       "description": "At Spark Finance, I developed multiple C# .NET microservices. These included services with event-driven architecture, including stream consumers and producers. Other services I developed orchestrated 30+ services to process data relating to specific companies and directors.",
-      "technologies": ["C# .NET", "AWS", "MySQL", "Docker", "Jenkins", "Blazor"]
+      "technologies": [
+        "C# .NET",
+        "AWS",
+        "MySQL",
+        "Docker",
+        "Jenkins",
+        "Blazor"
+      ],
+      "url": "https://www.sparkfinance.co.uk/"
     },
     {
       "id": "4",
@@ -48,7 +59,9 @@
       "company": "Cisco (Ensoft)",
       "period": "Aug 2023 - Sept 2023",
       "description": "Created Python monitoring tool tracking team performance and leadership metrics. This tool met Cisco's internal standards and remains in active use.",
-      "technologies": ["Python", "Shell", "Git"]
+      "technologies": ["Python", "Shell", "Git"],
+      "url": "https://www.cisco.com/",
+      "previewImage": "/images/cisco.png"
     }
   ],
   "education": [
@@ -87,14 +100,16 @@
       "startText": "Multiple ",
       "linkText": "open source contributions",
       "endText": " including better-auth & convex.",
-      "url": "https://go.charlielamb.com/github"
+      "url": "https://go.charlielamb.com/github",
+      "previewImage": "/images/github.png"
     },
     {
       "id": "4",
       "startText": "",
       "linkText": "500+ GitHub stars",
       "endText": " across my open source projects.",
-      "url": "https://go.charlielamb.com/github"
+      "url": "https://go.charlielamb.com/github",
+      "previewImage": "/images/github.png"
     }
   ]
 }
