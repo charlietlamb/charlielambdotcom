@@ -83,7 +83,7 @@
   "achievements": [
     {
       "id": "1",
-      "startText": "Building ",
+      "startText": "Built ",
       "linkText": "ferix.ai",
       "endText": ", an open-source collectio of agent skills, subagents and rules.",
       "url": "https://ferix.ai"

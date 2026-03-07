@@ -1,6 +1,7 @@
 "use client";
 
-import { Moon, Sun } from "lucide-react";
+import { MoonIcon } from "@phosphor-icons/react/dist/csr/Moon";
+import { SunIcon } from "@phosphor-icons/react/dist/csr/Sun";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -34,7 +35,7 @@ export function ThemeToggle() {
         className="p-2 text-muted-foreground hover:text-foreground transition-colors"
         aria-label="Toggle theme"
       >
-        <Sun className="h-5 w-5" />
+        <SunIcon className="h-5 w-5" weight="fill" />
       </button>
     );
   }
@@ -58,9 +59,9 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {resolvedTheme === "dark" ? (
-        <Sun className="h-5 w-5" />
+        <SunIcon className="h-5 w-5" weight="fill" />
       ) : (
-        <Moon className="h-5 w-5" />
+        <MoonIcon className="h-5 w-5" weight="fill" />
       )}
     </button>
   );

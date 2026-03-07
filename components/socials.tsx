@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { GitHubIcon } from "@/components/icons/github-icon";
 import { XIcon } from "@/components/icons/x-icon";
 import { LinkedInIcon } from "./icons/linkedin-icon";
 
@@ -12,7 +12,7 @@ export function Socials() {
         className="text-muted-foreground hover:text-foreground transition-colors"
         aria-label="GitHub"
       >
-        <Github className="h-5 w-5" />
+        <GitHubIcon className="h-5 w-5" />
       </a>
       <a
         href="https://go.charlielamb.com/x"

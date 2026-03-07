@@ -51,14 +51,10 @@ export function JsonLd({ baseUrl }: JsonLdProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
+      <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
+      <script type="application/ld+json">
+        {JSON.stringify(websiteSchema)}
+      </script>
     </>
   );
 }
