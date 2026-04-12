@@ -89,6 +89,13 @@
       "url": "https://ferix.ai"
     },
     {
+      "id": "5",
+      "startText": "Built ",
+      "linkText": "openlogs.dev",
+      "endText": " to give agents access to dev logs, used by thousands of developers daily.",
+      "url": "https://openlogs.dev"
+    },
+    {
       "id": "2",
       "startText": "1st place at the ",
       "linkText": "{Tech: Europe}, OpenAI & VEED",
