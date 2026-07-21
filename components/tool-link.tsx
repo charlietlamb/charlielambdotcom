@@ -12,9 +12,9 @@ export function ToolLink({ href, label, icon: Icon }: ToolLinkProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-[0.3em] whitespace-nowrap font-medium tracking-tight text-muted-foreground transition-colors hover:text-foreground focus-visible:text-foreground"
+      className="inline-flex max-w-full items-center gap-1 whitespace-nowrap align-baseline font-medium leading-none tracking-tight text-muted-foreground transition-colors hover:text-foreground focus-visible:text-foreground"
     >
-      <Icon className="size-[0.85em] shrink-0" />
+      <Icon className="size-4 shrink-0" />
       {label}
     </Link>
   );
