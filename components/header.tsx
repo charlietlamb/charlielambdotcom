@@ -25,8 +25,9 @@ export function Header() {
           href="https://useautumn.com"
           label="Autumn"
           icon={AutumnIcon}
-        />
-        {". "}I like writing strict, clean{" "}
+          suffix="."
+        />{" "}
+        I like writing strict, clean{" "}
         <ToolLink
           href="https://www.typescriptlang.org"
           label="TypeScript"
@@ -37,10 +38,17 @@ export function Header() {
           href="https://effect.website"
           label="Effect"
           icon={EffectIcon}
-        />
-        , <ToolLink href="https://bun.sh" label="Bun" icon={BunIcon} />, and{" "}
-        <ToolLink href="https://zod.dev" label="Zod" icon={ZodIcon} />
-        {" - "}the stronger the types, the better.
+          suffix=","
+        />{" "}
+        <ToolLink href="https://bun.sh" label="Bun" icon={BunIcon} suffix="," />{" "}
+        and{" "}
+        <ToolLink
+          href="https://zod.dev"
+          label="Zod"
+          icon={ZodIcon}
+          suffix=" - the"
+        />{" "}
+        stronger the types, the better.
       </p>
     </header>
   );
