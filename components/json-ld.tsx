@@ -1,22 +1,18 @@
-import data from "@/lib/data.json";
-
 interface JsonLdProps {
   baseUrl: string;
 }
 
 export function JsonLd({ baseUrl }: JsonLdProps) {
-  const currentJob = data.experience[0];
-
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Charlie Lamb",
     url: baseUrl,
-    jobTitle: currentJob.title,
+    jobTitle: "Founding Engineer",
     worksFor: {
       "@type": "Organization",
-      name: currentJob.company,
-      url: currentJob.url,
+      name: "Autumn (YC S25)",
+      url: "https://useautumn.com",
     },
     alumniOf: {
       "@type": "EducationalOrganization",

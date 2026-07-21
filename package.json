@@ -10,17 +10,11 @@
     "format": "biome format --write"
   },
   "dependencies": {
-    "@base-ui/react": "^1.2.0",
-    "@icons-pack/react-simple-icons": "^13.12.0",
     "@phosphor-icons/react": "^2.1.10",
-    "@radix-ui/react-separator": "^1.1.8",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
     "next": "16.0.7",
     "next-themes": "^0.4.6",
     "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "tailwind-merge": "^3.4.0"
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.0",

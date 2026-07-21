@@ -53,6 +53,12 @@
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   --radius: 0.625rem;
+
+  --contrib-0: oklch(0.93 0.008 260);
+  --contrib-1: oklch(0.82 0.06 260);
+  --contrib-2: oklch(0.72 0.1 260);
+  --contrib-3: oklch(0.62 0.14 260);
+  --contrib-4: oklch(0.52 0.18 260);
 }
 
 .dark {
@@ -110,6 +116,12 @@
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   --radius: 0.625rem;
+
+  --contrib-0: oklch(0.2 0.015 260);
+  --contrib-1: oklch(0.35 0.07 260);
+  --contrib-2: oklch(0.48 0.11 260);
+  --contrib-3: oklch(0.62 0.15 260);
+  --contrib-4: oklch(0.74 0.17 260);
 }
 
 @theme inline {
