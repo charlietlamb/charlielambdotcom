@@ -1,14 +1,7 @@
 "use client";
 
 import { GitCommitIcon } from "@phosphor-icons/react";
-import {
-  type CSSProperties,
-  type MouseEvent,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { type MouseEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import type {
   ContribDay,
@@ -26,10 +19,15 @@ const LEVEL_VARS = [
   "var(--contrib-3)",
   "var(--contrib-4)",
 ];
-const SKELETON_CELLS = Array.from(
-  { length: 53 * 7 },
-  (_, index) => `${Math.floor(index / 7)}-${index % 7}`,
-);
+const random = (index: number, salt: number) => {
+  const value = Math.sin((index + 1) * (salt + 1) * 999) * 10_000;
+  return value - Math.floor(value);
+};
+const SKELETON_CELLS = Array.from({ length: 53 * 7 }, (_, index) => ({
+  key: `${Math.floor(index / 7)}-${index % 7}`,
+  delay: `${(-random(index, 1) * 3).toFixed(2)}s`,
+  duration: `${(2.6 + random(index, 2) * 1.6).toFixed(2)}s`,
+}));
 const SKELETON_GRID: Grid = {
   cells: [],
   width: 53 * STEP - GAP,
@@ -169,15 +167,15 @@ export function Contributions() {
             ) : (
               <foreignObject width={grid.width} height={grid.height}>
                 <div className="grid grid-flow-col grid-cols-[repeat(53,11px)] grid-rows-[repeat(7,11px)] gap-[3px]">
-                  {SKELETON_CELLS.map((cell, index) => (
+                  {SKELETON_CELLS.map((cell) => (
                     <Skeleton
-                      key={cell}
-                      className="contribution-skeleton size-[11px] rounded-[2px]"
-                      style={
-                        {
-                          "--skeleton-x": `${Math.floor(index / 7) * STEP + (index % 7) * 2}px`,
-                        } as CSSProperties
-                      }
+                      key={cell.key}
+                      shimmer={false}
+                      className="size-[11px] rounded-[2px]"
+                      style={{
+                        animationDelay: cell.delay,
+                        animationDuration: cell.duration,
+                      }}
                     />
                   ))}
                 </div>
