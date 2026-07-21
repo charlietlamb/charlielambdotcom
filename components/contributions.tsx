@@ -159,8 +159,8 @@ export function Contributions() {
                   fill={LEVEL_VARS[cell.level] ?? LEVEL_VARS[0]}
                   className={
                     hover?.day.date === cell.day?.date
-                      ? "brightness-125"
-                      : undefined
+                      ? "contribution-cell-enter brightness-125"
+                      : "contribution-cell-enter"
                   }
                 />
               ))

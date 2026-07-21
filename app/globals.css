@@ -24,6 +24,16 @@
   }
 }
 
+@keyframes contribution-cell-enter {
+  from {
+    fill: var(--accent);
+  }
+}
+
+.contribution-cell-enter {
+  animation: contribution-cell-enter 220ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
 .skeleton-shimmer {
   background-color: var(--accent);
   background-image: linear-gradient(
@@ -39,7 +49,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .skeleton-shimmer {
+  .skeleton-shimmer,
+  .contribution-cell-enter {
     animation: none;
   }
 }
