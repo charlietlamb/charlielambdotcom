@@ -5,7 +5,6 @@ import { TypeScriptIcon } from "@/components/icons/typescript-icon";
 import { ZodIcon } from "@/components/icons/zod-icon";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ToolLink } from "@/components/tool-link";
-import { Socials } from "./socials";
 
 export function Header() {
   return (
@@ -14,10 +13,7 @@ export function Header() {
         <h1 className="text-2xl text-foreground tracking-tight">
           Charlie Lamb
         </h1>
-        <div className="flex items-center gap-2">
-          <Socials />
-          <ThemeToggle />
-        </div>
+        <ThemeToggle />
       </div>
       <p className="text-pretty text-muted-foreground">
         London based software engineer, working as a founding engineer at{" "}
