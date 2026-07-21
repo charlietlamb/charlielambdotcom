@@ -1,6 +1,7 @@
 import { AutumnIcon } from "@/components/icons/autumn-icon";
 import { BunIcon } from "@/components/icons/bun-icon";
 import { EffectIcon } from "@/components/icons/effect-icon";
+import { TypeScriptIcon } from "@/components/icons/typescript-icon";
 import { ZodIcon } from "@/components/icons/zod-icon";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ToolLink } from "@/components/tool-link";
@@ -19,13 +20,19 @@ export function Header() {
         </div>
       </div>
       <p className="text-pretty text-muted-foreground">
-        London based software engineer, founding engineer at{" "}
+        London based software engineer, working as a founding engineer at{" "}
         <ToolLink
           href="https://useautumn.com"
           label="Autumn"
           icon={AutumnIcon}
         />
-        {". "}I like writing strict, clean TypeScript with tools like{" "}
+        {". "}I like writing strict, clean{" "}
+        <ToolLink
+          href="https://www.typescriptlang.org"
+          label="TypeScript"
+          icon={TypeScriptIcon}
+        />{" "}
+        with tools like{" "}
         <ToolLink
           href="https://effect.website"
           label="Effect"
