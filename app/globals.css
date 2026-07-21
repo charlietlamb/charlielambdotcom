@@ -17,3 +17,27 @@
 ::view-transition-new(root) {
   animation-duration: 0.4s;
 }
+
+@keyframes skeleton-shimmer {
+  to {
+    background-position: -100% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background-image: linear-gradient(
+    110deg,
+    var(--accent) 35%,
+    color-mix(in oklab, var(--accent) 65%, var(--muted-foreground)) 50%,
+    var(--accent) 65%
+  );
+  background-position: 100% 0;
+  background-size: 300% 100%;
+  animation: skeleton-shimmer 1.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-shimmer {
+    animation: none;
+  }
+}

@@ -2,6 +2,7 @@
 
 import { GitCommitIcon } from "@phosphor-icons/react";
 import { type MouseEvent, useEffect, useMemo, useRef, useState } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 import type {
   ContribDay,
   Contributions as ContributionsData,
@@ -18,6 +19,15 @@ const LEVEL_VARS = [
   "var(--contrib-3)",
   "var(--contrib-4)",
 ];
+const SKELETON_CELLS = Array.from(
+  { length: 53 * 7 },
+  (_, index) => `${Math.floor(index / 7)}-${index % 7}`,
+);
+const SKELETON_GRID: Grid = {
+  cells: [],
+  width: 53 * STEP - GAP,
+  height: 7 * STEP - GAP,
+};
 
 type GridCell = { col: number; row: number; level: number; day?: ContribDay };
 type Grid = { cells: GridCell[]; width: number; height: number };
@@ -75,7 +85,10 @@ export function Contributions() {
     };
   }, []);
 
-  const grid = useMemo(() => buildGrid(data?.days ?? []), [data]);
+  const grid = useMemo(
+    () => (data ? buildGrid(data.days) : SKELETON_GRID),
+    [data],
+  );
   const cellByKey = useMemo(
     () => new Map(grid.cells.map((cell) => [`${cell.col}-${cell.row}`, cell])),
     [grid],
@@ -100,45 +113,65 @@ export function Contributions() {
     }
   };
 
-  if (grid.width <= 0) return null;
-
   return (
-    <section className="space-y-4">
+    <section className="flex flex-col gap-4">
       <div className="flex items-center justify-between gap-4">
         <h2 className="text-base font-medium tracking-tight text-foreground">
           Recent Contributions
         </h2>
-        <span className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm text-muted-foreground">
+        <div className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm text-muted-foreground">
           <GitCommitIcon weight="fill" className="size-3.5" />
-          {data ? data.total.toLocaleString("en-US") : "—"} last yr
-        </span>
+          {data ? (
+            data.total.toLocaleString("en-US")
+          ) : (
+            <Skeleton className="h-3 w-8 rounded-sm">
+              <span className="sr-only">Loading</span>
+            </Skeleton>
+          )}{" "}
+          last yr
+        </div>
       </div>
       <div ref={containerRef} className="relative w-full">
         <div className="overflow-x-auto">
           <svg
             aria-label="github contributions over the last year"
+            aria-busy={!data}
             role="img"
             viewBox={`0 0 ${grid.width} ${grid.height}`}
             className="w-full min-w-[560px]"
             onMouseMove={track}
             onMouseLeave={() => setHover(null)}
           >
-            {grid.cells.map((cell) => (
-              <rect
-                key={`${cell.col}-${cell.row}`}
-                x={cell.col * STEP}
-                y={cell.row * STEP}
-                width={SIZE}
-                height={SIZE}
-                rx={2}
-                fill={LEVEL_VARS[cell.level] ?? LEVEL_VARS[0]}
-                className={
-                  hover?.day.date === cell.day?.date
-                    ? "brightness-125"
-                    : undefined
-                }
-              />
-            ))}
+            {data ? (
+              grid.cells.map((cell) => (
+                <rect
+                  key={`${cell.col}-${cell.row}`}
+                  x={cell.col * STEP}
+                  y={cell.row * STEP}
+                  width={SIZE}
+                  height={SIZE}
+                  rx={2}
+                  fill={LEVEL_VARS[cell.level] ?? LEVEL_VARS[0]}
+                  className={
+                    hover?.day.date === cell.day?.date
+                      ? "brightness-125"
+                      : undefined
+                  }
+                />
+              ))
+            ) : (
+              <foreignObject width={grid.width} height={grid.height}>
+                <div className="grid grid-flow-col grid-cols-[repeat(53,11px)] grid-rows-[repeat(7,11px)] gap-[3px]">
+                  {SKELETON_CELLS.map((cell, index) => (
+                    <Skeleton
+                      key={cell}
+                      className="size-[11px] rounded-[2px]"
+                      style={{ animationDelay: `${index * -24}ms` }}
+                    />
+                  ))}
+                </div>
+              </foreignObject>
+            )}
           </svg>
         </div>
         {hover ? (
