@@ -1,7 +1,14 @@
 "use client";
 
 import { GitCommitIcon } from "@phosphor-icons/react";
-import { type MouseEvent, useEffect, useMemo, useRef, useState } from "react";
+import {
+  type CSSProperties,
+  type MouseEvent,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import type {
   ContribDay,
@@ -165,8 +172,12 @@ export function Contributions() {
                   {SKELETON_CELLS.map((cell, index) => (
                     <Skeleton
                       key={cell}
-                      className="size-[11px] rounded-[2px]"
-                      style={{ animationDelay: `${index * -24}ms` }}
+                      className="contribution-skeleton size-[11px] rounded-[2px]"
+                      style={
+                        {
+                          "--skeleton-x": `${Math.floor(index / 7) * STEP + (index % 7) * 2}px`,
+                        } as CSSProperties
+                      }
                     />
                   ))}
                 </div>
