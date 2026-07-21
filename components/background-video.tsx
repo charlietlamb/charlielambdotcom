@@ -52,7 +52,7 @@ export function BackgroundVideo() {
           playsInline
           preload="none"
           data-ready={ready}
-          className="h-full w-full object-cover opacity-0 transition-opacity duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none data-[ready=true]:opacity-[0.035] dark:data-[ready=true]:opacity-[0.025]"
+          className="h-full w-full object-cover opacity-0 transition-opacity duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none data-[ready=true]:opacity-[0.04] dark:data-[ready=true]:opacity-[0.03]"
         />
       ) : null}
     </div>
