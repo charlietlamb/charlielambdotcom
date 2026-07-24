@@ -18,6 +18,7 @@ export function Header() {
       <p className="text-pretty text-muted-foreground">
         London based software engineer, working as a founding engineer at{" "}
         <ToolLink
+          backgroundTint="autumn"
           href="https://useautumn.com"
           label="Autumn"
           icon={AutumnIcon}
@@ -25,20 +26,29 @@ export function Header() {
         />{" "}
         I like writing strict, clean{" "}
         <ToolLink
+          backgroundTint="typescript"
           href="https://www.typescriptlang.org"
           label="TypeScript"
           icon={TypeScriptIcon}
         />{" "}
         with tools like{" "}
         <ToolLink
+          backgroundTint="effect"
           href="https://effect.website"
           label="Effect"
           icon={EffectIcon}
           suffix=","
         />{" "}
-        <ToolLink href="https://bun.sh" label="Bun" icon={BunIcon} suffix="," />{" "}
+        <ToolLink
+          backgroundTint="bun"
+          href="https://bun.sh"
+          label="Bun"
+          icon={BunIcon}
+          suffix=","
+        />{" "}
         and{" "}
         <ToolLink
+          backgroundTint="zod"
           href="https://zod.dev"
           label="Zod"
           icon={ZodIcon}

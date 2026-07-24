@@ -48,6 +48,40 @@
   animation: skeleton-shimmer 1.6s linear infinite;
 }
 
+body:has([data-background-tint="autumn"]:is(:hover, :focus-visible)) {
+  --tool-background-tint: #8b5cf6;
+}
+
+body:has([data-background-tint="typescript"]:is(:hover, :focus-visible)) {
+  --tool-background-tint: #3178c6;
+}
+
+body:has([data-background-tint="effect"]:is(:hover, :focus-visible)) {
+  --tool-background-tint: #00d2ef;
+}
+
+body:has([data-background-tint="bun"]:is(:hover, :focus-visible)) {
+  --tool-background-tint: #eab48f;
+}
+
+body:has([data-background-tint="zod"]:is(:hover, :focus-visible)) {
+  --tool-background-tint: #3e67b1;
+}
+
+.tool-background-overlay {
+  background-color: var(--tool-background-tint);
+}
+
+body:has([data-background-tint]:focus-visible) .tool-background-overlay {
+  opacity: 0.8;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body:has([data-background-tint]:hover) .tool-background-overlay {
+    opacity: 0.8;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .skeleton-shimmer,
   .contribution-cell-enter {
