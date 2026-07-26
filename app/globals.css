@@ -2,6 +2,15 @@
 @import "tw-animate-css";
 @import "./themes.css";
 
+.name-heading {
+  font-family: serif;
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

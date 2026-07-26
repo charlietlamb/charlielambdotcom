@@ -10,9 +10,7 @@ export function Header() {
   return (
     <header className="flex flex-col gap-2">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl text-foreground tracking-tight">
-          Charlie Lamb
-        </h1>
+        <h1 className="name-heading text-foreground">Charlie Lamb</h1>
         <ThemeToggle />
       </div>
       <p className="text-pretty text-muted-foreground">
