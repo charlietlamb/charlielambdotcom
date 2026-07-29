@@ -77,6 +77,10 @@ body:has([data-background-tint="zod"]:is(:hover, :focus-visible)) {
   --tool-background-tint: #3e67b1;
 }
 
+body:has([data-background-tint="spurs"]:is(:hover, :focus-visible)) {
+  --tool-background-tint: #000a3c;
+}
+
 .tool-background-overlay {
   background-color: var(--tool-background-tint);
 }
