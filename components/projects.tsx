@@ -5,6 +5,7 @@ import {
   StarIcon,
   TerminalWindowIcon,
 } from "@phosphor-icons/react/ssr";
+import { AnpordIcon } from "@/components/icons/anpord-icon";
 import { GitHubIcon } from "@/components/icons/github-icon";
 import { SphynxIcon } from "@/components/icons/sphynx-icon";
 
@@ -16,6 +17,15 @@ type Repository = {
 type Stats = Record<string, { stars: number; commits: number }>;
 
 const PROJECTS = [
+  {
+    slug: "anpord",
+    name: "Anpord",
+    description: "Write, version, and ship the prompts behind your product",
+    website: "https://anpord.com",
+    icon: (
+      <AnpordIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
+    ),
+  },
   {
     slug: "sphynx",
     name: "Sphynx",
@@ -52,6 +62,9 @@ const PROJECTS = [
 ] as const;
 
 const QUERY = `query {
+  anpord: repository(owner: "charlietlamb", name: "anpord") {
+    stargazerCount defaultBranchRef { target { ... on Commit { history { totalCount } } } }
+  }
   sphynx: repository(owner: "charlietlamb", name: "sphynx") {
     stargazerCount defaultBranchRef { target { ... on Commit { history { totalCount } } } }
   }
