@@ -42,22 +42,25 @@ export function BackgroundVideo() {
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
       {source ? (
-        <div
-          data-ready={ready}
-          className="relative isolate h-full w-full opacity-0 transition-opacity duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none data-[ready=true]:opacity-[0.05] dark:data-[ready=true]:opacity-[0.045]"
-        >
-          <video
-            ref={videoRef}
-            src={source.video}
-            poster={source.poster}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-            className="h-full w-full object-cover"
-          />
-          <div className="tool-background-overlay absolute inset-0 opacity-0 mix-blend-color transition-[opacity,background-color] duration-[400ms] ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none" />
+        <div className="relative isolate h-full w-full">
+          <div
+            data-ready={ready}
+            className="h-full w-full opacity-0 transition-opacity duration-[900ms] ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none data-[ready=true]:opacity-[0.05] dark:data-[ready=true]:opacity-[0.045]"
+          >
+            <video
+              ref={videoRef}
+              src={source.video}
+              poster={source.poster}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+              className="h-full w-full object-cover"
+            />
+            <div className="tool-background-overlay absolute inset-0 opacity-0 mix-blend-color transition-[opacity,background-color] duration-[400ms] ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none" />
+          </div>
+          <div className="absolute inset-0 bg-background/20" />
         </div>
       ) : null}
     </div>
