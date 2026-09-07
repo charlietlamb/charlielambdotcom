@@ -1,11 +1,17 @@
+const MARK = "M-9-44H9L19-34L9-28L13-23L8-18H-8L-13-23L-9-28L-19-34Z";
+const ROTATIONS = [0, 60, 120, 180, 240, 300];
+
 export function AnpordIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
-    <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9 2H23A7 7 0 0 1 30 9V23A7 7 0 0 1 23 30H9A7 7 0 0 1 2 23V9A7 7 0 0 1 9 2ZM8 8H24V16L16 24H8Z"
-      />
+    <svg
+      viewBox="-48 -48 96 96"
+      aria-hidden="true"
+      fill="currentColor"
+      {...props}
+    >
+      {ROTATIONS.map((angle) => (
+        <path key={angle} d={MARK} transform={`rotate(${angle})`} />
+      ))}
     </svg>
   );
 }
