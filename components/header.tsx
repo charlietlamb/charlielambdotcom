@@ -57,7 +57,7 @@ export function Header() {
         <ToolLink
           backgroundTint="spurs"
           href="https://www.tottenhamhotspur.com"
-          label="Spurs"
+          label="COYS"
           icon={SpursIcon}
           iconClassName="h-[0.84375em] w-[0.37em]"
           suffix=" fan."
