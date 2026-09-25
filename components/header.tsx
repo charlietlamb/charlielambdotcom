@@ -1,7 +1,6 @@
 import { AutumnIcon } from "@/components/icons/autumn-icon";
 import { BunIcon } from "@/components/icons/bun-icon";
 import { EffectIcon } from "@/components/icons/effect-icon";
-import { SpursIcon } from "@/components/icons/spurs-icon";
 import { TypeScriptIcon } from "@/components/icons/typescript-icon";
 import { ZodIcon } from "@/components/icons/zod-icon";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -53,14 +52,11 @@ export function Header() {
           icon={ZodIcon}
           suffix=" - the"
         />{" "}
-        stronger the types, the better. I&apos;m also a massive{" "}
+        stronger the types, the better.{" "}
         <ToolLink
           backgroundTint="spurs"
           href="https://www.tottenhamhotspur.com"
           label="COYS"
-          icon={SpursIcon}
-          iconClassName="h-[0.84375em] w-[0.37em]"
-          suffix=" fan."
         />
       </p>
     </header>
