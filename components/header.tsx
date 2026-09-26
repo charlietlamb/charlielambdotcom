@@ -52,12 +52,7 @@ export function Header() {
           icon={ZodIcon}
           suffix=" - the"
         />{" "}
-        stronger the types, the better.{" "}
-        <ToolLink
-          backgroundTint="spurs"
-          href="https://www.tottenhamhotspur.com"
-          label="COYS"
-        />
+        stronger the types, the better.
       </p>
     </header>
   );
