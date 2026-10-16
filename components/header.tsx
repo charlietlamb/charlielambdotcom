@@ -13,7 +13,7 @@ export function Header() {
         <h1 className="font-medium text-foreground">Charlie Lamb</h1>
         <ThemeToggle />
       </div>
-      <p className="text-pretty leading-7 text-muted-foreground">
+      <p className="text-pretty leading-normal text-muted-foreground">
         London based software engineer, working as a founding engineer at{" "}
         <ToolLink
           backgroundTint="autumn"
