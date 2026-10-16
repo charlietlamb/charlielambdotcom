@@ -112,11 +112,9 @@ export async function Projects() {
   const stats = await getStats();
 
   return (
-    <section className="space-y-3">
-      <h2 className="text-base font-medium tracking-tight text-foreground">
-        Things I’m building
-      </h2>
-      <ul className="divide-y divide-border/60">
+    <section className="space-y-4">
+      <h2 className="font-medium text-foreground">Things I’m building</h2>
+      <ul className="divide-y divide-border/40">
         {PROJECTS.map((project) => {
           const projectStats = stats[project.slug];
 

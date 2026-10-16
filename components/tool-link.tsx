@@ -18,16 +18,18 @@ export function ToolLink({
   suffix,
 }: ToolLinkProps) {
   return (
-    <span className="whitespace-nowrap">
+    <span className="mx-[0.15em] whitespace-nowrap">
       <Link
         href={href}
         target="_blank"
         rel="noopener noreferrer"
         data-background-tint={backgroundTint}
-        className="inline-flex max-w-full translate-y-0.5 items-end gap-[0.2em] align-baseline font-medium leading-none tracking-tight text-muted-foreground transition-colors hover:text-foreground focus-visible:text-foreground"
+        className="group/tool inline-flex max-w-full translate-y-0.5 items-end gap-[0.3em] align-baseline leading-none text-foreground/80 transition-colors hover:text-foreground focus-visible:text-foreground"
       >
         {Icon ? <Icon className={`${iconClassName} shrink-0`} /> : null}
-        {label}
+        <span className="underline decoration-border decoration-1 underline-offset-[0.2em] transition-colors group-hover/tool:decoration-current">
+          {label}
+        </span>
       </Link>
       {suffix}
     </span>

@@ -1,7 +1,6 @@
 import { Databuddy } from "@databuddy/sdk/react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { metadata } from "@/app/metadata";
-import { BackgroundVideo } from "@/components/background-video";
 import { JsonLd } from "@/components/json-ld";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
@@ -34,7 +33,6 @@ export default function RootLayout({
           }
         />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <BackgroundVideo />
           {children}
         </ThemeProvider>
         <Databuddy

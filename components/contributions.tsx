@@ -121,9 +121,7 @@ export function Contributions() {
   return (
     <section className="flex flex-col gap-4">
       <div className="flex items-center justify-between gap-4">
-        <h2 className="text-base font-medium tracking-tight text-foreground">
-          Recent Contributions
-        </h2>
+        <h2 className="font-medium text-foreground">Recent Contributions</h2>
         <div className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm text-muted-foreground">
           <GitCommitIcon weight="fill" className="size-3.5" />
           {data ? (

@@ -1,4 +1,11 @@
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="7" fill="#fff"/>
-  <path d="M24 6H12L6 12V20L12 26H24L20 21H14L11 18V14L14 11H20Z" fill="#0a0a0a"/>
+  <rect width="32" height="32" rx="8" fill="#171717"/>
+  <g fill="#fff" transform="translate(16 16) scale(0.25)">
+    <path d="M-9-44H9L19-34L9-28L13-23L8-18H-8L-13-23L-9-28L-19-34Z" transform="rotate(0)"/>
+    <path d="M-9-44H9L19-34L9-28L13-23L8-18H-8L-13-23L-9-28L-19-34Z" transform="rotate(60)"/>
+    <path d="M-9-44H9L19-34L9-28L13-23L8-18H-8L-13-23L-9-28L-19-34Z" transform="rotate(120)"/>
+    <path d="M-9-44H9L19-34L9-28L13-23L8-18H-8L-13-23L-9-28L-19-34Z" transform="rotate(180)"/>
+    <path d="M-9-44H9L19-34L9-28L13-23L8-18H-8L-13-23L-9-28L-19-34Z" transform="rotate(240)"/>
+    <path d="M-9-44H9L19-34L9-28L13-23L8-18H-8L-13-23L-9-28L-19-34Z" transform="rotate(300)"/>
+  </g>
 </svg>

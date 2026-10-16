@@ -1,11 +1,11 @@
 :root {
   /* Base surfaces - cool blue tint matching dark mode's hue */
-  --background: oklch(0.99 0.005 260);
-  --foreground: oklch(0.15 0.02 260);
-  --card: oklch(0.98 0.008 260);
-  --card-foreground: oklch(0.15 0.02 260);
-  --popover: oklch(0.99 0.005 260);
-  --popover-foreground: oklch(0.15 0.02 260);
+  --background: oklch(0.995 0.002 260);
+  --foreground: oklch(0.2 0.008 260);
+  --card: oklch(0.985 0.003 260);
+  --card-foreground: oklch(0.2 0.008 260);
+  --popover: oklch(0.995 0.002 260);
+  --popover-foreground: oklch(0.2 0.008 260);
 
   /* Primary - rich amber/gold with light text for contrast */
   --primary: oklch(0.65 0.18 90);
@@ -16,17 +16,17 @@
   --secondary-foreground: oklch(0.15 0.02 260);
 
   /* Muted - subtle cool backgrounds */
-  --muted: oklch(0.95 0.008 260);
-  --muted-foreground: oklch(0.45 0.02 260);
+  --muted: oklch(0.96 0.003 260);
+  --muted-foreground: oklch(0.5 0.008 260);
 
   /* Accent - subtle surface with yellow foreground */
-  --accent: oklch(0.96 0.008 260);
+  --accent: oklch(0.965 0.003 260);
   --accent-foreground: oklch(0.55 0.18 90);
 
   --destructive: oklch(0.55 0.22 27.325);
 
   /* Borders - cool blue tinted */
-  --border: oklch(0.88 0.01 260);
+  --border: oklch(0.9 0.004 260);
   --input: oklch(0.97 0.008 260);
   --ring: oklch(0.65 0.18 90);
 
@@ -63,12 +63,12 @@
 
 .dark {
   /* Base surfaces - refined elevation scale with 0.02 steps */
-  --background: oklch(0.13 0.02 260);
-  --foreground: oklch(0.93 0.01 260);
-  --card: oklch(0.15 0.02 260);
-  --card-foreground: oklch(0.93 0.01 260);
-  --popover: oklch(0.17 0.02 260);
-  --popover-foreground: oklch(0.93 0.01 260);
+  --background: oklch(0.14 0.006 260);
+  --foreground: oklch(0.9 0.004 260);
+  --card: oklch(0.16 0.006 260);
+  --card-foreground: oklch(0.9 0.004 260);
+  --popover: oklch(0.18 0.006 260);
+  --popover-foreground: oklch(0.9 0.004 260);
 
   /* Primary - bright yellow with dark contrast text */
   --primary: oklch(0.92 0.17 95);
@@ -79,17 +79,17 @@
   --secondary-foreground: oklch(0.93 0.01 260);
 
   /* Muted - subtle backgrounds */
-  --muted: oklch(0.19 0.02 260);
-  --muted-foreground: oklch(0.65 0.015 260);
+  --muted: oklch(0.2 0.006 260);
+  --muted-foreground: oklch(0.66 0.006 260);
 
   /* Accent - uses primary color for emphasis */
-  --accent: oklch(0.19 0.02 260);
+  --accent: oklch(0.2 0.006 260);
   --accent-foreground: oklch(0.92 0.17 95);
 
   --destructive: oklch(0.66 0.217 30.383);
 
   /* Borders - solid blue-tinted for consistency */
-  --border: oklch(0.25 0.015 260);
+  --border: oklch(0.26 0.006 260);
   --input: oklch(0.19 0.02 260);
   --ring: oklch(0.92 0.17 95);
 

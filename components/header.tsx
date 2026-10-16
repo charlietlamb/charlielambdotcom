@@ -8,12 +8,12 @@ import { ToolLink } from "@/components/tool-link";
 
 export function Header() {
   return (
-    <header className="flex flex-col gap-2">
+    <header className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
-        <h1 className="name-heading text-foreground">Charlie Lamb</h1>
+        <h1 className="font-medium text-foreground">Charlie Lamb</h1>
         <ThemeToggle />
       </div>
-      <p className="text-pretty text-muted-foreground">
+      <p className="text-pretty leading-7 text-muted-foreground">
         London based software engineer, working as a founding engineer at{" "}
         <ToolLink
           backgroundTint="autumn"

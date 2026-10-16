@@ -6,11 +6,11 @@ import { Socials } from "@/components/socials";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col gap-8 px-4 py-8 sm:justify-center">
+    <div className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col gap-[clamp(2rem,6dvh,3.5rem)] px-6 py-8 sm:justify-center">
       <Header />
       <Projects />
       <Contributions />
-      <footer className="flex flex-col gap-3 pb-2 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+      <footer className="flex flex-col gap-3 pt-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <span>
           If you want to get in touch, feel free to send me an{" "}
           <a
