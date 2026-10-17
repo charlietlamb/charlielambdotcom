@@ -20,9 +20,8 @@ const PROJECTS = [
   {
     slug: "anpord",
     name: "Anpord",
-    description:
-      "Run coding agent evals across harnesses, models, and sandboxes",
-    website: "https://anpord.com",
+    description: "Agentic code review",
+    website: "https://github.com/charlietlamb/anpord",
     icon: (
       <AnpordIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
     ),
@@ -30,7 +29,8 @@ const PROJECTS = [
   {
     slug: "sphynx",
     name: "Sphynx",
-    description: "Agentic code review",
+    description:
+      "Run coding agent evals across harnesses, models, and sandboxes",
     website: "https://sphynx.sh",
     icon: (
       <SphynxIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
