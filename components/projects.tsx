@@ -18,15 +18,6 @@ type Stats = Record<string, { stars: number; commits: number }>;
 
 const PROJECTS = [
   {
-    slug: "anpord",
-    name: "Anpord",
-    description: "Agentic code review",
-    website: "https://github.com/charlietlamb/anpord",
-    icon: (
-      <AnpordIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
-    ),
-  },
-  {
     slug: "sphynx",
     name: "Sphynx",
     description:
@@ -34,6 +25,15 @@ const PROJECTS = [
     website: "https://sphynx.sh",
     icon: (
       <SphynxIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
+    ),
+  },
+  {
+    slug: "anpord",
+    name: "Anpord",
+    description: "Agentic code review",
+    website: "https://github.com/charlietlamb/anpord",
+    icon: (
+      <AnpordIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
     ),
   },
   {
@@ -144,16 +144,26 @@ export async function Projects() {
                 </span>
               </a>
               <span className="flex items-center gap-3 text-xs tabular-nums text-muted-foreground">
-                <span className="flex items-center gap-1">
+                <a
+                  href={`https://github.com/charlietlamb/${project.slug}/stargazers`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 transition-colors hover:text-foreground"
+                >
                   <StarIcon weight="fill" className="size-3.5" />
                   {projectStats?.stars.toLocaleString("en-US") ?? "—"}
                   <span className="sr-only"> stars</span>
-                </span>
-                <span className="flex items-center gap-1">
+                </a>
+                <a
+                  href={`https://github.com/charlietlamb/${project.slug}/commits`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 transition-colors hover:text-foreground"
+                >
                   <GitCommitIcon weight="fill" className="size-3.5" />
                   {projectStats?.commits.toLocaleString("en-US") ?? "—"}
                   <span className="sr-only"> commits</span>
-                </span>
+                </a>
                 <a
                   href={`https://github.com/charlietlamb/${project.slug}`}
                   target="_blank"
