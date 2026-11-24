@@ -3,12 +3,14 @@ import { Contributions } from "@/components/contributions";
 import { Header } from "@/components/header";
 import { Projects } from "@/components/projects";
 import { Socials } from "@/components/socials";
+import { Writing } from "@/components/writing";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col gap-[clamp(2rem,6dvh,3.5rem)] px-6 py-8 sm:justify-center">
+    <div className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col gap-(--section-gap) px-6 py-8 [--section-gap:clamp(2rem,6dvh,3.5rem)] sm:pt-[max(2rem,calc(50dvh-var(--section-gap)*1.5-277px))]">
       <Header />
       <Projects />
+      <Writing />
       <Contributions />
       <footer className="flex flex-col gap-3 pt-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <span>

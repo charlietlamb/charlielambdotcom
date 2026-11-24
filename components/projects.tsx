@@ -6,6 +6,7 @@ import {
   TerminalWindowIcon,
 } from "@phosphor-icons/react/ssr";
 import { AnpordIcon } from "@/components/icons/anpord-icon";
+import { AvazalIcon } from "@/components/icons/avazal-icon";
 import { GitHubIcon } from "@/components/icons/github-icon";
 import { SphynxIcon } from "@/components/icons/sphynx-icon";
 
@@ -18,11 +19,22 @@ type Stats = Record<string, { stars: number; commits: number }>;
 
 const PROJECTS = [
   {
+    slug: "avazal",
+    name: "Avazal",
+    description: "The agentic workspace for engineering teams",
+    website: "https://avazal.com",
+    public: false,
+    icon: (
+      <AvazalIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
+    ),
+  },
+  {
     slug: "sphynx",
     name: "Sphynx",
     description:
       "Run coding agent evals across harnesses, models, and sandboxes",
     website: "https://sphynx.sh",
+    public: true,
     icon: (
       <SphynxIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
     ),
@@ -32,6 +44,7 @@ const PROJECTS = [
     name: "Anpord",
     description: "Agentic code review",
     website: "https://github.com/charlietlamb/anpord",
+    public: true,
     icon: (
       <AnpordIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
     ),
@@ -41,6 +54,7 @@ const PROJECTS = [
     name: "OpenLogs",
     description: "Give coding agents access to your logs",
     website: "https://openlogs.dev",
+    public: true,
     icon: (
       <TerminalWindowIcon
         weight="fill"
@@ -53,6 +67,7 @@ const PROJECTS = [
     name: "Ferix",
     description: "Discover and share agent skills",
     website: "https://www.ferix.ai",
+    public: true,
     icon: (
       <PackageIcon
         weight="fill"
@@ -143,37 +158,39 @@ export async function Projects() {
                   </span>
                 </span>
               </a>
-              <span className="flex items-center gap-3 text-xs tabular-nums text-muted-foreground">
-                <a
-                  href={`https://github.com/charlietlamb/${project.slug}/stargazers`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 transition-colors hover:text-foreground"
-                >
-                  <StarIcon weight="fill" className="size-3.5" />
-                  {projectStats?.stars.toLocaleString("en-US") ?? "—"}
-                  <span className="sr-only"> stars</span>
-                </a>
-                <a
-                  href={`https://github.com/charlietlamb/${project.slug}/commits`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 transition-colors hover:text-foreground"
-                >
-                  <GitCommitIcon weight="fill" className="size-3.5" />
-                  {projectStats?.commits.toLocaleString("en-US") ?? "—"}
-                  <span className="sr-only"> commits</span>
-                </a>
-                <a
-                  href={`https://github.com/charlietlamb/${project.slug}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`View ${project.name} on GitHub`}
-                  className="ml-1 transition-colors hover:text-foreground"
-                >
-                  <GitHubIcon className="size-4" />
-                </a>
-              </span>
+              {project.public && (
+                <span className="flex items-center gap-3 text-xs tabular-nums text-muted-foreground">
+                  <a
+                    href={`https://github.com/charlietlamb/${project.slug}/stargazers`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 transition-colors hover:text-foreground"
+                  >
+                    <StarIcon weight="fill" className="size-3.5" />
+                    {projectStats?.stars.toLocaleString("en-US") ?? "—"}
+                    <span className="sr-only"> stars</span>
+                  </a>
+                  <a
+                    href={`https://github.com/charlietlamb/${project.slug}/commits`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 transition-colors hover:text-foreground"
+                  >
+                    <GitCommitIcon weight="fill" className="size-3.5" />
+                    {projectStats?.commits.toLocaleString("en-US") ?? "—"}
+                    <span className="sr-only"> commits</span>
+                  </a>
+                  <a
+                    href={`https://github.com/charlietlamb/${project.slug}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${project.name} on GitHub`}
+                    className="ml-1 transition-colors hover:text-foreground"
+                  >
+                    <GitHubIcon className="size-4" />
+                  </a>
+                </span>
+              )}
             </li>
           );
         })}
